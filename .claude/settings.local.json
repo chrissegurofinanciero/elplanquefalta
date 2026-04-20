@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm run *)",
-      "Bash(start \"\" \"c:/Users/jeane/OneDrive/Desktop/elplanquefalta/index.html\")"
+      "Bash(start \"\" \"c:/Users/jeane/OneDrive/Desktop/elplanquefalta/index.html\")",
+      "Bash(start \"\" \"c:/Users/jeane/OneDrive/Desktop/elplanquefalta/public/index.html\")"
     ]
   }
 }
