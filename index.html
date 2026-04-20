@@ -10,72 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        sage: '#4A5D4C',
-                        sageLight: '#5E7461', 
-                        sageDeep: '#2D382E',  
-                        cream: '#F5F2EB',
-                        warmGrey: '#E8E5DC',
-                        gold: '#D4A853',
-                        softBlack: '#1A1A1A',
-                        darkSage: '#344136',
-                        error: '#CC3333',
-                    },
-                    fontFamily: {
-                        fraunces: ['Fraunces', 'serif'],
-                        dmsans: ['DM Sans', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        /* Modern elegant depth background */
-        body { 
-            background: radial-gradient(circle at center, #4A5D4C 0%, #2D382E 100%); 
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        .session-card:hover .arrow-icon { transform: translateX(4px); }
-        .transition-all-custom { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-        
-        /* Glassmorphism for modern feel */
-        .glass-card {
-            background: rgba(245, 242, 235, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(245, 242, 235, 0.1);
-        }
-
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-
-        input[type="range"] {
-            -webkit-appearance: none;
-            appearance: none;
-            background: #E8E5DC;
-            height: 6px;
-            border-radius: 10px;
-        }
-        input[type="range"]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 22px;
-            height: 22px;
-            background: #D4A853;
-            border-radius: 50%;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            border: 2px solid white;
-        }
-    </style>
+    <!-- Tailwind CSS (compiled) -->
+    <link rel="stylesheet" href="dist/styles.css">
 </head>
 <body class="font-dmsans text-softBlack antialiased selection:bg-gold/30 text-center">
 
@@ -117,7 +53,7 @@
                 <!-- AGENDA SECTION -->
                 <span class="w-full text-[10px] font-bold tracking-[3px] text-cream/40 uppercase mb-5 text-center">Agenda tu sesión</span>
                 <div class="w-full space-y-4 mb-12 text-darkSage text-left">
-                    <a href="https://calendar.app.google/8yXMd1YB79BnHvVL9" target="_blank" rel="noopener noreferrer" class="session-card group w-full bg-cream rounded-2xl flex items-stretch overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.2)] active:scale-95 transition-all-custom">
+                    <a href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer" class="session-card group w-full bg-cream rounded-2xl flex items-stretch overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.2)] active:scale-95 transition-all-custom">
                         <div class="w-2 bg-gold"></div>
                         <div class="flex-1 py-5 px-6 flex items-center justify-between">
                             <div><h3 class="font-bold text-base">Diagnóstico Financiero</h3><p class="text-[11px] opacity-60">60 min — Revisamos tu estado real</p></div>
@@ -279,7 +215,7 @@
                         <div class="bg-gold p-8 rounded-[32px] text-center space-y-5 shadow-2xl mx-auto">
                             <h5 class="font-fraunces font-bold text-darkSage text-xl text-center">¿Tienes el vehículo correcto?</h5>
                             <p class="text-[12px] text-darkSage/70 leading-relaxed mx-auto text-center">El 95% restante es la ejecución. Vamos a trazar tu ruta.</p>
-                            <a href="https://calendar.app.google/8yXMd1YB79BnHvVL9" target="_blank" rel="noopener noreferrer" class="block w-full bg-darkSage text-cream py-4 rounded-2xl text-sm font-bold shadow-xl hover:scale-[1.02] active:scale-95 transition-all text-center">Agendar Sesión Gratuita</a>
+                            <a href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer" class="block w-full bg-darkSage text-cream py-4 rounded-2xl text-sm font-bold shadow-xl hover:scale-[1.02] active:scale-95 transition-all text-center">Agendar Sesión Gratuita</a>
                         </div>
                         <button onclick="resetCalc()" class="w-full text-[10px] font-bold text-darkSage/30 uppercase tracking-[3px] mt-10 underline underline-offset-8 text-center mx-auto">Volver a calcular</button>
                     </div>
