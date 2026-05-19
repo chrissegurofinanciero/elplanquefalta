@@ -81,6 +81,14 @@
                 <!-- RESOURCES SECTION -->
                 <span class="w-full text-[10px] font-bold tracking-[3px] text-cream/40 uppercase mb-5 text-center">Herramientas y Recursos</span>
                 <div class="w-full space-y-3 mb-12 text-left">
+                    <button onclick="switchView('tools')" class="w-full bg-cream rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_40px_rgba(245,242,235,0.15)] hover:scale-[1.02] active:scale-95 transition-all-custom text-darkSage">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-gold/15 flex items-center justify-center text-gold"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 00-5.6 5.6L3 18l3 3 6.1-6.1a4 4 0 005.6-5.6l-2.8 2.8-2.8-2.8 2.8-2.8z"/></svg></div>
+                            <span class="text-base font-bold">Herramientas</span>
+                        </div>
+                        <svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </button>
+
                     <a href="https://forms.gle/LDvbtsaUaYV4GFVPA" target="_blank" rel="noopener noreferrer" class="w-full bg-sageDeep rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_40px_rgba(45,56,46,0.4)] hover:scale-[1.02] active:scale-95 transition-all-custom text-cream border border-gold/30">
                         <div class="flex items-center gap-4">
                             <div class="w-10 h-10 rounded-xl bg-gold/20 flex items-center justify-center text-gold"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 21V4a1 1 0 011-1h13l-2 4 2 4H5"/></svg></div>
@@ -88,14 +96,6 @@
                         </div>
                         <svg class="w-5 h-5 text-gold opacity-70" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
                     </a>
-
-                    <button onclick="switchView('calculator')" class="w-full bg-gold rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_40px_rgba(212,168,83,0.3)] hover:scale-[1.02] active:scale-95 transition-all-custom text-darkSage">
-                        <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 rounded-xl bg-darkSage/10 flex items-center justify-center"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-                            <span class="text-base font-bold">Calculadora de Libertad</span>
-                        </div>
-                        <svg class="w-5 h-5 opacity-50" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-                    </button>
 
                     <a href="https://tiktok.com/@elplanquefalta" target="_blank" rel="noopener noreferrer" class="w-full glass-card rounded-2xl p-5 flex items-center justify-between hover:bg-cream/10 transition-all-custom text-cream/90 text-left">
                         <div class="flex items-center gap-4">
@@ -230,6 +230,132 @@
                 </div>
             </div>
         </section>
+
+        <!-- SECTION: TOOLS HUB -->
+        <section id="view-tools" class="view hidden bg-cream min-h-screen text-softBlack">
+            <nav class="bg-sageDeep px-6 py-5 flex justify-between items-center text-cream shadow-xl">
+                <div class="font-fraunces font-bold text-base tracking-tight">El Plan<span class="text-gold italic">QueFalta</span></div>
+                <button onclick="switchView('links')" class="text-xs font-bold text-gold flex items-center gap-1 hover:text-cream transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 16 16"><path d="M10 4l-4 4 4 4"/></svg> VOLVER
+                </button>
+            </nav>
+
+            <header class="bg-sageDeep px-8 pt-10 pb-20 text-center text-cream relative overflow-hidden">
+                <div class="relative z-10 mx-auto text-center">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-[10px] font-bold text-gold uppercase tracking-[3px] mb-6">Recursos Gratuitos</span>
+                    <h2 class="font-fraunces text-4xl font-bold leading-tight mb-4">Herramientas<br><em>para tu plan</em></h2>
+                    <p class="text-cream/60 text-sm max-w-xs mx-auto leading-relaxed">Calculadoras y recursos para tomar mejores decisiones financieras.</p>
+                </div>
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-12 bg-cream" style="clip-path: ellipse(55% 100% at 50% 100%);"></div>
+            </header>
+
+            <div class="max-w-md mx-auto px-6 -mt-12 pb-24 relative z-20">
+                <!-- CALCULADORAS -->
+                <span class="w-full text-[10px] font-bold tracking-[3px] text-darkSage/40 uppercase mb-4 block">Calculadoras</span>
+                <div class="space-y-3 mb-10">
+                    <button onclick="switchView('perfil')" class="w-full bg-white rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_30px_rgba(52,65,54,0.1)] border border-sage/5 hover:scale-[1.02] active:scale-95 transition-all-custom text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-gold/15 flex items-center justify-center text-gold flex-shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg></div>
+                            <div>
+                                <h3 class="font-bold text-darkSage text-base">Perfil de Inversor</h3>
+                                <p class="text-[11px] text-darkSage/50 mt-0.5">8 preguntas — Descubre qué tipo de inversor eres</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 text-darkSage/30 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </button>
+
+                    <button onclick="switchView('calculator')" class="w-full bg-gold rounded-2xl p-5 flex items-center justify-between shadow-[0_10px_40px_rgba(212,168,83,0.3)] hover:scale-[1.02] active:scale-95 transition-all-custom text-darkSage text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-darkSage/10 flex items-center justify-center flex-shrink-0"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+                            <div>
+                                <h3 class="font-bold text-base">Calculadora de Libertad</h3>
+                                <p class="text-[11px] opacity-60 mt-0.5">Tu número para la libertad financiera</p>
+                            </div>
+                        </div>
+                        <svg class="w-5 h-5 opacity-50 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                    </button>
+                </div>
+
+                <!-- DESCARGAS -->
+                <span class="w-full text-[10px] font-bold tracking-[3px] text-darkSage/40 uppercase mb-4 block">Descargas</span>
+                <div class="space-y-3">
+                    <div class="w-full bg-warmGrey/40 rounded-2xl p-6 text-center border-2 border-dashed border-darkSage/15">
+                        <div class="w-12 h-12 mx-auto rounded-full bg-darkSage/5 flex items-center justify-center text-darkSage/40 mb-3"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg></div>
+                        <p class="text-xs font-bold text-darkSage/60 tracking-wide">Próximamente</p>
+                        <p class="text-[11px] text-darkSage/40 mt-1">Plantillas, guías y recursos descargables</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: PERFIL DE INVERSOR -->
+        <section id="view-perfil" class="view hidden bg-cream min-h-screen text-softBlack">
+            <nav class="bg-sageDeep px-6 py-5 flex justify-between items-center text-cream shadow-xl">
+                <div class="font-fraunces font-bold text-base tracking-tight">El Plan<span class="text-gold italic">QueFalta</span></div>
+                <button onclick="switchView('tools')" class="text-xs font-bold text-gold flex items-center gap-1 hover:text-cream transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 16 16"><path d="M10 4l-4 4 4 4"/></svg> VOLVER
+                </button>
+            </nav>
+
+            <header class="bg-sageDeep px-8 pt-10 pb-20 text-center text-cream relative overflow-hidden">
+                <div class="relative z-10 mx-auto text-center">
+                    <span class="inline-block px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-[10px] font-bold text-gold uppercase tracking-[3px] mb-6">Test Gratuito</span>
+                    <h2 class="font-fraunces text-4xl font-bold leading-tight mb-4">Tu Perfil de<br><em>Inversor</em></h2>
+                    <p class="text-cream/60 text-sm max-w-xs mx-auto leading-relaxed">8 preguntas para entender cómo deberías invertir tu dinero.</p>
+                </div>
+                <div class="absolute -top-20 -right-20 w-64 h-64 bg-gold/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-0 right-0 h-12 bg-cream" style="clip-path: ellipse(55% 100% at 50% 100%);"></div>
+            </header>
+
+            <div class="max-w-md mx-auto px-6 -mt-12 pb-24 relative z-20">
+                <!-- PROGRESS BAR -->
+                <div id="perfil-progress-wrap" class="mb-6">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-[10px] font-bold text-darkSage/40 uppercase tracking-[2px]">Pregunta <span id="perfil-current">1</span> de 8</span>
+                        <span id="perfil-percent" class="text-[10px] font-bold text-gold">12%</span>
+                    </div>
+                    <div class="w-full h-1.5 bg-warmGrey rounded-full overflow-hidden">
+                        <div id="perfil-bar" class="h-full bg-gold transition-all duration-500" style="width: 12.5%"></div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-[32px] p-8 shadow-[0_20px_60px_rgba(52,65,54,0.15)] border border-sage/5">
+                    <!-- QUESTION VIEW -->
+                    <div id="perfil-question-view" class="block text-left">
+                        <span class="text-[11px] font-bold text-gold uppercase tracking-[3px] block mb-3">Paso <span id="perfil-step-num">1</span> de 8</span>
+                        <h3 id="perfil-question-title" class="font-fraunces text-xl font-bold text-darkSage mb-6 leading-tight"></h3>
+                        <div id="perfil-options" class="space-y-2.5"></div>
+                        <button id="perfil-back-btn" onclick="perfilPrev()" class="w-full text-darkSage/40 font-bold text-[10px] uppercase tracking-[3px] mt-6 hidden">← Volver atrás</button>
+                    </div>
+
+                    <!-- RESULT VIEW -->
+                    <div id="perfil-result-view" class="hidden text-center">
+                        <span class="text-[11px] font-bold text-gold uppercase tracking-[4px] mb-3 block">Tu Perfil</span>
+                        <h3 id="perfil-result-name" class="font-fraunces text-4xl font-bold text-darkSage mb-2 leading-none"></h3>
+                        <p id="perfil-result-score" class="text-xs text-darkSage/40 mb-6">0 / 40 puntos</p>
+
+                        <div class="bg-sageDeep p-6 rounded-[24px] mb-6 text-left">
+                            <h4 class="text-gold text-[10px] font-bold uppercase tracking-[3px] mb-3">Qué significa</h4>
+                            <p id="perfil-result-desc" class="text-cream text-[13px] leading-relaxed opacity-90"></p>
+                        </div>
+
+                        <div class="bg-warmGrey/30 p-5 rounded-[20px] mb-8 text-left border border-sage/5">
+                            <h4 class="text-darkSage text-[10px] font-bold uppercase tracking-[3px] mb-3">Productos sugeridos</h4>
+                            <p id="perfil-result-products" class="text-darkSage text-[13px] leading-relaxed"></p>
+                        </div>
+
+                        <div class="bg-gold p-6 rounded-[28px] text-center space-y-4 shadow-2xl">
+                            <h5 class="font-fraunces font-bold text-darkSage text-lg">¿Quieres armar tu portafolio?</h5>
+                            <p class="text-[12px] text-darkSage/70 leading-relaxed">Agenda una sesión gratis y diseñamos tu plan personalizado.</p>
+                            <a href="https://calendar.app.google/b12dcLWdyYB7BiMg7" target="_blank" rel="noopener noreferrer" class="block w-full bg-darkSage text-cream py-4 rounded-xl text-sm font-bold shadow-xl hover:scale-[1.02] active:scale-95 transition-all">Agendar Sesión Gratuita</a>
+                        </div>
+
+                        <button onclick="perfilReset()" class="w-full text-[10px] font-bold text-darkSage/30 uppercase tracking-[3px] mt-8 underline underline-offset-8">Volver a empezar</button>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <script>
@@ -349,6 +475,189 @@
             updateDots(1);
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // ── PERFIL DE INVERSOR ──
+        const perfilQuestions = [
+            {
+                title: '¿Cuál es tu principal objetivo al invertir?',
+                options: [
+                    { text: 'Proteger mi dinero contra la inflación', points: 1 },
+                    { text: 'Crecimiento moderado sin sustos', points: 2 },
+                    { text: 'Equilibrio entre crecimiento y estabilidad', points: 3 },
+                    { text: 'Crecimiento significativo de mi capital', points: 4 },
+                    { text: 'Maximizar rendimientos sin importar el riesgo', points: 5 },
+                ],
+            },
+            {
+                title: 'Si tu inversión perdiera valor temporalmente, ¿qué tan cómodo estarías?',
+                options: [
+                    { text: 'Muy incómodo, no podría dormir', points: 1 },
+                    { text: 'Incómodo, vendería parte', points: 2 },
+                    { text: 'Lo aceptaría pero preocupado', points: 3 },
+                    { text: 'Cómodo, mantendría la posición', points: 4 },
+                    { text: 'Muy cómodo, lo vería como oportunidad', points: 5 },
+                ],
+            },
+            {
+                title: '¿Cuál es tu horizonte de inversión?',
+                options: [
+                    { text: 'Menos de 1 año', points: 1 },
+                    { text: 'Entre 1 y 3 años', points: 2 },
+                    { text: 'Entre 3 y 5 años', points: 3 },
+                    { text: 'Entre 5 y 10 años', points: 4 },
+                    { text: 'Más de 10 años', points: 5 },
+                ],
+            },
+            {
+                title: 'Si tu inversión cayera 10% en un mes, ¿qué harías?',
+                options: [
+                    { text: 'Retiraría todo mi dinero', points: 1 },
+                    { text: 'Retiraría una parte importante', points: 2 },
+                    { text: 'No haría nada, esperaría', points: 3 },
+                    { text: 'Invertiría un poco más', points: 4 },
+                    { text: 'Invertiría significativamente más', points: 5 },
+                ],
+            },
+            {
+                title: '¿Qué porcentaje de tus ingresos puedes destinar a invertir?',
+                options: [
+                    { text: 'Menos del 5%', points: 1 },
+                    { text: 'Entre 5% y 10%', points: 2 },
+                    { text: 'Entre 10% y 20%', points: 3 },
+                    { text: 'Entre 20% y 30%', points: 4 },
+                    { text: 'Más del 30%', points: 5 },
+                ],
+            },
+            {
+                title: 'Sobre inversiones de alto riesgo y alto rendimiento, tú dirías:',
+                options: [
+                    { text: 'Las evito completamente', points: 1 },
+                    { text: 'Solo una pequeña parte de mi capital', points: 2 },
+                    { text: 'Las considero ocasionalmente', points: 3 },
+                    { text: 'Forman parte importante de mi estrategia', points: 4 },
+                    { text: 'Son mi enfoque principal', points: 5 },
+                ],
+            },
+            {
+                title: '¿Qué tan importante es tener acceso rápido a tu dinero?',
+                options: [
+                    { text: 'Necesito acceso inmediato', points: 1 },
+                    { text: 'Acceso en pocas semanas', points: 2 },
+                    { text: 'Acceso en algunos meses está bien', points: 3 },
+                    { text: 'Puedo esperar 1 o 2 años', points: 4 },
+                    { text: 'No me importa la liquidez', points: 5 },
+                ],
+            },
+            {
+                title: '¿Qué tan familiarizado estás con instrumentos financieros?',
+                options: [
+                    { text: 'Me parecen muy complicados', points: 1 },
+                    { text: 'Sé poco pero quiero aprender', points: 2 },
+                    { text: 'Tengo un conocimiento básico', points: 3 },
+                    { text: 'Conozco varios productos y los he usado', points: 4 },
+                    { text: 'Los entiendo bien y me emocionan', points: 5 },
+                ],
+            },
+        ];
+
+        const perfilProfiles = [
+            {
+                min: 8, max: 16, name: 'Conservador',
+                desc: 'Tu prioridad es preservar tu capital. Prefieres rendimientos predecibles aunque sean modestos, antes que arriesgar tu dinero. Tu estrategia debe enfocarse en inversiones de bajo riesgo y alta liquidez.',
+                products: 'CETES, fondos de deuda gubernamental, pagarés bancarios, bonos corporativos de alta calidad, fondos de inversión conservadores.',
+            },
+            {
+                min: 17, max: 24, name: 'Moderado',
+                desc: 'Buscas un balance entre seguridad y crecimiento. Aceptas algo de volatilidad para obtener rendimientos por arriba de la inflación, pero no toleras pérdidas grandes. Diversificación es tu palabra clave.',
+                products: 'Fondos balanceados (60% deuda / 40% renta variable), ETFs globales, bonos corporativos, una porción de acciones de empresas sólidas.',
+            },
+            {
+                min: 25, max: 32, name: 'Balanceado',
+                desc: 'Estás dispuesto a aceptar volatilidad significativa a cambio de mayor crecimiento a largo plazo. Entiendes que las caídas son temporales y forman parte del camino hacia mejores rendimientos.',
+                products: 'ETFs diversificados (S&P 500, mercados desarrollados), acciones individuales de empresas establecidas, mezcla 60/40 acciones-bonos, REITs.',
+            },
+            {
+                min: 33, max: 40, name: 'Agresivo',
+                desc: 'Buscas el máximo crecimiento posible y toleras alta volatilidad. Tu horizonte de largo plazo y conocimiento te permiten aprovechar oportunidades de mayor riesgo y mayor recompensa.',
+                products: 'Acciones de crecimiento, mercados emergentes, sectores específicos (tech, energía limpia), ETFs sectoriales, una porción en activos alternativos.',
+            },
+        ];
+
+        const perfilState = { current: 0, answers: [] };
+
+        function perfilRenderQuestion() {
+            const i = perfilState.current;
+            const q = perfilQuestions[i];
+
+            document.getElementById('perfil-current').innerText = i + 1;
+            document.getElementById('perfil-step-num').innerText = i + 1;
+            const pct = Math.round(((i + 1) / perfilQuestions.length) * 100);
+            document.getElementById('perfil-percent').innerText = pct + '%';
+            document.getElementById('perfil-bar').style.width = pct + '%';
+
+            document.getElementById('perfil-question-title').innerText = q.title;
+
+            const container = document.getElementById('perfil-options');
+            container.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'w-full text-left bg-warmGrey/30 hover:bg-gold/20 border-2 border-transparent hover:border-gold/40 rounded-2xl py-4 px-5 text-darkSage font-medium text-sm transition-all-custom active:scale-95';
+                btn.innerHTML = `<span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-darkSage/10 text-darkSage/60 text-[11px] font-bold mr-3">${idx + 1}</span>${opt.text}`;
+                btn.onclick = () => perfilAnswer(opt.points);
+                container.appendChild(btn);
+            });
+
+            const backBtn = document.getElementById('perfil-back-btn');
+            if (i > 0) backBtn.classList.remove('hidden');
+            else backBtn.classList.add('hidden');
+        }
+
+        function perfilAnswer(points) {
+            perfilState.answers[perfilState.current] = points;
+            if (perfilState.current < perfilQuestions.length - 1) {
+                perfilState.current++;
+                perfilRenderQuestion();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                perfilShowResult();
+            }
+        }
+
+        function perfilPrev() {
+            if (perfilState.current > 0) {
+                perfilState.current--;
+                perfilRenderQuestion();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        function perfilShowResult() {
+            const total = perfilState.answers.reduce((a, b) => a + b, 0);
+            const profile = perfilProfiles.find(p => total >= p.min && total <= p.max);
+
+            document.getElementById('perfil-result-name').innerText = profile.name;
+            document.getElementById('perfil-result-score').innerText = `${total} / 40 puntos`;
+            document.getElementById('perfil-result-desc').innerText = profile.desc;
+            document.getElementById('perfil-result-products').innerText = profile.products;
+
+            document.getElementById('perfil-question-view').classList.add('hidden');
+            document.getElementById('perfil-progress-wrap').classList.add('hidden');
+            document.getElementById('perfil-result-view').classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function perfilReset() {
+            perfilState.current = 0;
+            perfilState.answers = [];
+            document.getElementById('perfil-result-view').classList.add('hidden');
+            document.getElementById('perfil-progress-wrap').classList.remove('hidden');
+            document.getElementById('perfil-question-view').classList.remove('hidden');
+            perfilRenderQuestion();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        perfilRenderQuestion();
     </script>
 </body>
 </html>
